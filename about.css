@@ -1,0 +1,354 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= COMMON ================= */
+.container {
+  padding: 70px 10%;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #00ffff;
+  margin-bottom: 25px;
+}
+
+.row {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 52px;
+  height: 46px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.logo img:hover {
+  transform: rotate(360deg) scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #00ffff;
+  transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .fas {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ================= HEADER ================= */
+.header-text {
+  text-align: center;
+  margin-top: 140px;
+  animation: fadeUp 1.2s ease;
+}
+
+.header-text p {
+  opacity: 0.8;
+  letter-spacing: 2px;
+}
+
+.header-text h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.highlight {
+  border: 2px solid #00ffff;
+  padding: 4px 12px;
+  border-radius: 10px;
+  animation: glow 2s infinite;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 32px;
+  border-radius: 30px;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0px 0px 30px 0px #00c6ff;
+  transform: scale(1.1);
+}
+
+/* ================= ABOUT ================= */
+.about-desc {
+  max-width: 800px;
+  padding-bottom: 2rem;
+  margin: auto;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.about-cards {
+  margin-top: 50px;
+}
+
+.about-card {
+  flex: 1;
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.25);
+  text-align: center;
+  transition: 0.5s;
+}
+
+.about-card i {
+  font-size: 40px;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.about-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 55px rgba(0,255,255,0.45);
+}
+
+/* ================= TABS ================= */
+.tab-title {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 50px 0 30px;
+  flex-wrap: wrap;
+}
+
+.tab-links {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 1px solid #00ffff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.tab-links:hover {
+  background: rgba(0,255,255,0.3);
+  color: #000;
+}
+
+.tab-links.active-link {
+  background: #00ffff;
+  color: #000;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+  animation: fadeUp 0.7s ease;
+}
+
+.tab-contents ul {
+  max-width: 600px;
+  margin: auto;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  border-left: 4px solid #00ffff;
+  transition: 0.4s;
+}
+
+.tab-contents ul li:hover {
+  transform: translateX(10px);
+}
+
+/* ================= SERVICES ================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+}
+
+.service-card {
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(18px);
+  text-align: center;
+  transition: 0.5s;
+}
+
+.service-card i {
+  font-size: 45px;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.service-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 55px rgba(0,255,255,0.45);
+}
+
+/* ================= CONTACT ================= */
+.contact-left,
+.contact-right {
+  flex: 1;
+  padding: 35px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(18px);
+  transition: 0.5s;
+}
+
+.contact-left:hover,
+.contact-right:hover {
+  transform: translateY(-10px);
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: none;
+}
+
+.contact-right button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#00ffff,#00c6ff);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================= SOCIAL ================= */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(0,255,255,0.2);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  color: #00ffff;
+  transition: 0.4s;
+}
+
+.social-icons a:hover {
+  background: #00ffff;
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #00ffff; }
+  50% { box-shadow: 0 0 20px #00ffff; }
+  100% { box-shadow: 0 0 5px #00ffff; }
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  nav ul{
+    position: fixed;
+    top:0;
+    right:-250px;
+    width:250px;
+    height:100vh;
+    background:#203a43;
+    flex-direction:column;
+    padding-top:80px;
+    padding-left: 1rem;
+    z-index: 3;
+    transition:0.4s;
+  }
+
+  nav .fas{
+    display:block;
+  }
+
+  nav ul .fa-times{
+    position:absolute;
+    top:25px;
+    right:25px;
+  }
+
+  .header-text h1{
+    font-size:32px;
+  }
+}

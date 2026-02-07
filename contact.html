@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeYug | Software Development Team</title>
+
+    <link rel="stylesheet" href="style (3).css" />
+    <script
+      src="https://kit.fontawesome.com/4b4ce344e6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header id="header">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="IMG_20260122_105604.jpg.jpeg" alt="CodeYug Logo" />
+            <h3>CodeYug</h3>
+          </div>
+             <h1>My Profile</h1>
+
+            <p><img src="WhatsApp Image 2026-02-02 at 20.24.51.jpeg" alt="My Photo">
+              Aakash kumar
+            </p>
+          <ul id="sidemenu">
+            <i class="fas fa-times" onclick="closemenu()"></i>
+            <li><a href="index (1).html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="header-text">
+          <p>Design • Develop • Deploy</p>
+          <h1>
+            We Build <span class="highlight">Modern Software</span><br />
+            For Growing Businesses
+          </h1>
+         <marquee><a href="#contact" class="btn">Let’s Work Together</a></marquee>
+        </div>
+      </div>
+    </header>
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- LEFT CARD: CONTACT INFO -->
+          <div class="contact-left">
+            <h1 class="sub-title">Get in Touch</h1>
+            <p><i class="fa-solid fa-envelope"></i>softwdevteam@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +91 9508843748</p>
+
+            <div class="social-icons">
+              <a href="https://wa.me/9508843748" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/aakash-kumar-522b2630b"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/coderyug.dev?"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1DaKBJqG7t/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@CoderYug-dev"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          </div>
+
+          <!-- RIGHT CARD: CONTACT FORM -->
+          <div class="contact-right">
+            <form action="demo.php" method="post">
+              <input type="text" placeholder="Your Name" required name="uname" />
+              <input type="email" placeholder="Your Email" required name="email" />
+              <textarea rows="6" placeholder="Your Message" name="message"></textarea>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
